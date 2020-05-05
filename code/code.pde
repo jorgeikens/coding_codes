@@ -29,7 +29,7 @@ int  bit(int i, char c){
         else    return 0;
 }
   
-String myName = "LAURENTIUS LAB";
+String myName = "LET THE FLAMES SPREAD THE FIRE";
 int pos = 0;
 int y = 50;
 
@@ -38,15 +38,14 @@ void draw(){
          //output the code for first letter of my name
          char c = myName.charAt(pos++);
          for (int i = 4; i >= 0; i--){
-              //work through the bits from right to left
-              print(bit(i,c));
-              if (bit(i,c) == 0)
-                 fill(255);//0 is printed white
-                 else fill(0); //1 becomes black
-              ellipse (150-20*i,y,15,15);
+               //work through the bits from right to left
+               print(bit(i,c));
+               if (bit(i,c) == 0)
+               fill(255);//0 is printed white
+               else fill(0); //1 becomes black
+               ellipse (150-20*i,y,15,15);
          }
          y = y + 20;
          println();
      } else {endRecord(); exit();}
 }
-
